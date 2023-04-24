@@ -1,15 +1,8 @@
 <script setup>
     // const users = [];
     import axios from 'axios';
-    import {
-        onMounted,
-        ref,
-        reactive
-    } from 'vue';
-    import {
-        Form,
-        Field
-    } from 'vee-validate';
+    import { onMounted, ref, reactive } from 'vue';
+    import { Form, Field } from 'vee-validate';
     import * as yup from 'yup';
 
     const users = ref([]);
@@ -35,17 +28,6 @@
             resetForm();
         })
     };
-
-    // const createUser = () => {
-    //     axios.post('/api/users', form)
-    //         .then((response) => {
-    //             users.value.push(response.data);
-    //             form.name = '';
-    //             form.email = '';
-    //             form.password = '';
-    //             $('#createUserModal').modal('hide');
-    //         })
-    // }
 
     onMounted(() => {
         getUsers();
